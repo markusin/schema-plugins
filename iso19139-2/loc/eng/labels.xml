@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<labels xmlns:gmd="http://www.isotc211.org/2005/gmd"
+	xmlns:gts="http://www.isotc211.org/2005/gts"
+	xmlns:gco="http://www.isotc211.org/2005/gco"
+	xmlns:gml="http://www.opengis.net/gml"
+	xmlns:gmi="http://sdi.eurac.edu/inspire/geonetwork/iso19139-2"
+	xmlns:srv="http://www.isotc211.org/2005/srv">
+	
+	<!-- ==================================================== -->
+	<element name="gmi:MI_Metadata">
+		<label>Metadata (EURAC)</label>
+		<description>root entity which defines metadata about a resource or
+			resources</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:MIE_Georectified">
+		<label>Grid Information</label>
+		<description>Spatial representation information about the grid</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:orientationParameterDescription">
+		<label>Orientation</label>
+		<description>Orientation used in creating the image</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_resamplingOption">
+		<label>Resampling Option</label>
+		<description>Resampling option used in creating the image.</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_scanGapInterpolation">
+		<label>Scan Gap Interpolation</label>
+		<description>Maximum scan gap width (in units of ETM+ 30-m detectors/pixels) filled by interpolation</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:MD_CRS">
+		<label>Reference System</label>
+		<description>Reference System Information</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:projection">
+		<label>Projection</label>
+		<description>Information about the cartographic projection</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:ellipsoid">
+		<label>Ellipsoid</label>
+		<description>Information about the reference ellipsoid</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:datum">
+		<label>Datum</label>
+		<description>Information about the datum</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:projectionParameters">
+		<label>Projection parameters</label>
+		<description>Information about the projection parameters</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:zone">
+		<label>Zone</label>
+		<description>Information about the zone</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:MIE_ImageDescription">
+		<label>Image Description</label>
+		<description>Information about the image characteristics.</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:MIE_Band">
+		<label>Band Information</label>
+		<description>Information about the band characteristics.</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_RadianceLMAX">
+		<label>Radiance LMAX</label>
+		<description>The spectral radiance scaled to QCALMAX in watts/(meter squared * ster * μm)</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_RadianceLMIN">
+		<label>Radiance LMIN</label>
+		<description>The spectral radiance scaled to QCALMIN in watts/(meter squared * ster * μm)</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_ReflectanceMAX">
+		<label>Reflectance MAX</label>
+		<description>The MAX spectral reflectance of the band</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_ReflectanceMIN">
+		<label>Reflectance MIN</label>
+		<description>The MIN spectral reflectance of the band</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_calibratedPixelValueMAX">
+		<label>Calibrated Pixel Value MAX</label>
+		<description>The minimum quantized calibrated pixel value (corresponding to LMAX) in DN</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_calibratedPixelValueMIN">
+		<label>Calibrated Pixel Value MIN</label>
+		<description>The minimum quantized calibrated pixel value (corresponding to LMIN) in DN</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_correctionGainBand">
+		<label>Correction Gain Band</label>
+		<description>Information about correction gain band</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_correctionBiasBand">
+		<label>Correction Bias Band</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_gainBand">
+		<label>Gain band</label>
+		<description> Band gain state of band detected at the start of a WRS scene</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_gainChangeBand">
+		<label>Gain change band</label>
+		<description>The presence and direction of change in detector gain state within the WRS scene</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_gainChangeScanBand">
+		<label>Gain change scan band</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_RadianceMulti">
+		<label>Radiance Multi</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_RadianceAdd">
+		<label>Radiance Add</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_ReflectanceMulti">
+		<label>Reflectance Multi</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->	
+	<element name="gmi:mie_ReflectanceAdd">
+		<label>Reflectance Add</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_calibrationFilename">
+		<label>Calibration file name</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_rollAngle">
+		<label>Roll Angle</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_earthSunDistance">
+		<label>Earth Sun Distance</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_groundControlPointsModel">
+		<label>Ground Control Points Model</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_fileNameBandQuality">
+		<label>File Name Band Quality</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_BPFNameOLI">
+		<label>BPF Name OLI</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_BPFNameTIRS">
+		<label>BPF Name TIRS</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_RLUTFileName">
+		<label>RLUT File Name</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:acquisitionInformation">
+		<label>Acquisition Information</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:instrument">
+		<label>Instrument</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:platform">
+		<label>Platform</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_productCharacteristics">
+		<label>Product Characteristics</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_WRS">
+		<label>WRS</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_WRSpath">
+		<label>WRS path</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_WRSrow">
+		<label>WRS row</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_WRSpathTarget">
+		<label>WRS path target</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_WRSrowTarget">
+		<label>WRS row target</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_panchromaticBand">
+		<label>Panchromatic Band</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_panchromaticLines">
+		<label>Panchromatic Lines</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_panchromaticSamples">
+		<label>Panchromatic Samples</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_thermalBand">
+		<label>Thermal Band</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_thermalLines">
+		<label>Thermal Lines</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_thermalSamples">
+		<label>Thermal Samples</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:resolution">
+		<label>Resolution</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_thermalConstant1Band10">
+		<label>Thermal Constant 1 Band10</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_thermalConstant1Band11">
+		<label>Thermal Constant 1 Band 11</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_thermalConstant2Band10">
+		<label>Thermal Constant 2 Band 10</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_thermalConstant2Band11">
+		<label>Thermal Constant 2 Band 11</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_reflectiveBand">
+		<label>Reflective Band</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_reflectiveLines">
+		<label>Reflective Lines</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_reflectiveSamples">
+		<label>Reflective Samples</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_elevationSource">
+		<label>Elevation Source</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_ephemerisType">
+		<label>Ephemeris Type</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_nadirOffnadir">
+		<label>Nadir OffNadir</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_receivingStationID">
+		<label>Receiving Station ID</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_dataAcquired">
+		<label>Data Acquired</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_sceneCenterTime">
+		<label>Scene Center Time</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_dataType">
+		<label>Data Type</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmi:mie_dataCategory">
+		<label>Data Category</label>
+		<description></description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_processingSoftwareVersion">
+		<label>Processing Software Version</label>
+		<description></description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:description">
+		<label>Description</label>
+		<description>Description</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:type">
+		<label>Type</label>
+		<description>Type</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:MIE_Platform">
+		<label>Platform</label>
+		<description>Platform</description>
+	</element>
+
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_orbitType">
+		<label>Orbit Type</label>
+		<description>Status type of image, if newly acquired or produced from a previously archived image </description>
+	</element>
+
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_dataStatus">
+		<label>Data Status</label>
+		<description>Status type of image, if newly acquired or produced from a previously archived image </description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_orbitDirection">
+		<label>Orbit Direction</label>
+		<description>The direction the satellite was traveling in its orbit when the image was acquired</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_incidenceAngle">
+		<label>Incidence Angle</label>
+		<description>The angle between the view direction of the satellite and a line perpendicular to the image or tile center</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_azimuthAngle">
+		<label>Azimuth Angle</label>
+		<description>The angle from true north at the image or tile center to the scan (line) direction at image center, in clockwise positive degrees. </description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_spaceCraftViewAngle">
+		<label>spaceCraftViewAngle</label>
+		<description>Spacecraft across-track off-nadir viewing angle used for imaging, in degrees with + being East and - being West</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_sensorScanningSystemType">
+		<label>Sensor Scanning System Type</label>
+		<description>Type of scanning system used by the sensor</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:MIE_Instrument">
+		<label>Instrument</label>
+		<description>Instrument</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:MI_AcquisitionInformation">
+		<label>Acquisition information description</label>
+		<description>Acquisition information description</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_numberOfBands">
+		<label>Number of bands</label>
+		<description>Number of Bands</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_groundSampleDistanceInColumn">
+		<label>Ground Sample Distance of the columns (pixels) within the image product</label>
+		<description>The GSD of the columns (pixels) within the image product</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_groundSampleDistanceInRow">
+		<label>Ground Sample Distance of the rows (pixels) within the image product</label>
+		<description>The GSD of the rows (pixels) within the image product</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_numberOfColumns">
+		<label>Number of columns (pixels) per line in the image</label>
+		<description>Number of columns (pixels) per line in the image</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_numberOfRows">
+		<label>Number of rows (lines) in the image</label>
+		<description>Number of rows (lines) in the image</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:MIE_ImageGeometry">
+		<label>Image Geometry description</label>
+		<description>Image Geometry description</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_imageGeometry">
+		<label>Image Geometry</label>
+		<description>Image Geometry</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_imageSize">
+		<label>Image Size in pixels</label>
+		<description>Image Size</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_versionISD">
+		<label>Version of Image Support Data</label>
+		<description>Version of ISD</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_pixelFormat">
+		<label>Pixel Format</label>
+		<description>Number of bits per pixel in the product image file.</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_tileID">
+		<label>Tile ID</label>
+		<description>Tile ID of the product corresponding to the RE Tile Grid</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_atmosphericCorrectionParameters">
+		<label>Atmospheric Correction Parameters</label>
+		<description>Atmospheric Correction Parameters</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:MIE_AtmosphericCorrectionParameters">
+		<label>Atmospheric Correction Parameters Information</label>
+		<description>Atmospheric Correction Parameters Information</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_atmosphericCorrectionApplied">
+		<label>Atmospheric Correction Applied</label>
+		<description>Atmospheric Correction Applied</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_autoVisibility">
+		<label>Auto Visibility</label>
+		<description>Indicates whether the visibility was automatically calculated or defaulted</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_visibility">
+		<label>Visibility in km</label>
+		<description>The visibility value used for atmospheric correction in km</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_aerosolType">
+		<label>Aerosol Type</label>
+		<description>The aerosol type used for atmospheric correction</description>
+	</element>			
+	<!-- ==================================================== -->
+		<element name="gmi:mie_waterVapor">
+		<label>The water vapor category</label>
+		<description>The water vapor category used</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_hazeRemoval">
+		<label>Haze Removal</label>
+		<description>Indicates whether haze removal was performed</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_roughTerrainCorrection">
+		<label>Rough terrain correction</label>
+		<description>Indicates whether rough terrain correction was performed</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_BRDFcorrection">
+		<label>BRDF correction</label>
+		<description>Indicates whether BRDF correction was performed</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_cloudMask">
+		<label>Cloud Mask</label>
+		<description>Cloud Mask</description>
+	</element>		
+	<!-- ==================================================== -->
+		<element name="gmi:mie_shadowMask">
+		<label>Shadow Mask</label>
+		<description>Shadow Mask</description>
+	</element>			
+
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_licenseInformation">
+		<label>License Information</label>
+		<description>Atmospheric Correction Applied</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:MIE_License">
+		<label>License</label>
+		<description>License</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_orderID">
+		<label>Order ID of the product</label>
+		<description>Order ID of the product</description>
+	</element>
+
+		<!-- ==================================================== -->
+		<element name="gmi:mie_licenseType">
+		<label>Name of selected license for the product</label>
+		<description>Name of selected license for the product</description>
+	</element>
+
+	
+			<!-- ==================================================== -->
+		<element name="gmi:mie_licenseLink">
+		<label>Hyperlink to the physical license file</label>
+		<description>Hyperlink to the physical license file</description>
+	</element>
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_maskFileName">
+		<label>File name of the mask file</label>
+		<description>Mask File Name</description>
+	</element>	
+	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_maskAvailability">
+		<label>Mask Availability</label>
+		<description>Mask Availability</description>
+	</element>	
+
+	<!-- ==================================================== -->
+		<element name="gmi:MIE_MaskInformation">
+		<label>Mask Information Description</label>
+		<description>Mask Information Description</description>
+	</element>	
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_archivingCenter">
+		<label>Archiving Center</label>
+		<description>Location where image is archived</description>
+	</element>		
+	<!-- ==================================================== -->
+		<element name="gmi:mie_archivingIdentifier">
+		<label>Archiving Identifier</label>
+		<description>Catalog ID of image within the RE DMS processing system</description>
+	</element>		
+	<!-- ==================================================== -->
+		<element name="gmi:mie_archivingDate">
+		<label>Archiving Date</label>
+		<description>Date image was archived</description>
+	</element>		
+	<!-- ==================================================== -->
+		<element name="gmi:mie_maskInfo">
+		<label>Mask Information</label>
+		<description>Mask Information</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_elevationCorrectionApplied">
+		<label>Type of elevation correction applied to the image</label>
+		<description>Type of elevation correction applied to the image</description>
+	</element>		
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_geoCorrectionLevel">
+		<label>Level of correction applied to the image</label>
+		<description>Level of correction applied to the image</description>
+	</element>
+	<!-- ==================================================== -->
+		<element name="gmi:mie_masking">
+		<label>Masking</label>
+		<description>Indicates the sensor applied masking</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_shifting">
+		<label>Shifting</label>
+		<description>Indicates the sensor applied right shifting</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_binning">
+		<label>Binning</label>
+		<description>Indicates the binning used (across track x along track)</description>
+	</element>	
+
+	<!-- ==================================================== -->
+		<element name="gmi:mie_suspectMissingLines">
+		<label>Suspect Missing Lines</label>
+		<description>Percentage of missing lines in the source data of this band</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_percentMissingLines">
+		<label>Percent Suspect Lines</label>
+		<description>Percentage of suspect lines (lines that contained downlink errors) in the source data for the band</description>
+	</element>	
+	
+	<!-- ==================================================== -->
+		<element name="mie_archivingInformation">
+		<label>Archiving Information</label>
+		<description>Archiving Information</description>
+	</element>	
+	<!-- ==================================================== -->
+		<element name="gmi:mie_platformName">
+		<label>Platform Name</label>
+		<description>Identifies the name of the satellite platform used to collect the image</description>
+	</element>		
+
+
+		<!-- ==================================================== -->
+	<element name="gmi:mie_missingValue">
+		<label>Missing Value</label>
+		<description></description>
+	</element>
+	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_usableValue">
+		<label>Usable Value</label>
+		<description></description>
+	</element>
+	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_missingData">
+		<label>Missing Data</label>
+		<description></description>
+	</element>	
+	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_calibrationQuality">
+		<label>Calibration Quality</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_rowsProjectedGrid">
+		<label>Rows in projected grid</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_columnsProjectedGrid">
+		<label>Columns in projected grid</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_imageCenterX">
+		<label>Image Center X</label>
+		<description></description>
+	</element>
+		<!-- ==================================================== -->
+	<element name="gmi:mie_imageCenterY">
+		<label>Image Center Y</label>
+		<description></description>
+	</element>
+		<!-- ==================================================== -->
+	<element name="gmi:mie_equatorCrossingTime">
+		<label>Equator Crossing Time</label>
+		<description></description>
+	</element>
+		<!-- ==================================================== -->
+	<element name="gmi:mie_AveragedBlackBodyTemperature">
+		<label>Averaged Black Body Temperature</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:MIE_EnvironmentalRecord">
+		<label>Environmental Record</label>
+		<description></description>
+	</element>		
+		<!-- ==================================================== -->
+	<element name="gmi:mie_emissiveBand">
+		<label>Emissive Band</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_earthSunDistance">
+		<label>Emissive Band</label>
+		<description></description>
+	</element>		
+		<!-- ==================================================== -->
+	<element name="gmi:mie_fileTypeVersion">
+		<label>File Type Version</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_additionalFiles">
+		<label>Additional Files</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_processDescription">
+		<label>Process Description</label>
+		<description></description>
+	</element>							
+		<!-- ==================================================== -->
+	<element name="gmi:mie_processingCenter">
+		<label>Processing Center</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_reprocessingStatus">
+		<label>Reprocessing Status</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_ancilliaryData">
+		<label>Ancilliary Data</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_ancillaryInputType">
+		<label>Ancillary Input Type</label>
+		<description></description>
+	</element>					
+		<!-- ==================================================== -->
+	<element name="gmi:mie_algorithmPackageMaturityCode">
+		<label>Algorithm Package Maturity Code</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_ESCVersion">
+		<label>ESC Version</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_DayNightFlag">
+		<label>Day Night Flag</label>
+		<description></description>
+	</element>			
+		<!-- ==================================================== -->
+	<element name="gmi:mie_productionTime">
+		<label>Production Time</label>
+		<description></description>
+	</element>		
+		<!-- ==================================================== -->
+	<element name="gmi:mie_incompleteScans">
+		<label>Incomplete Scans</label>
+		<description></description>
+	</element>					
+		<!-- ==================================================== -->
+	<element name="gmi:mie_earthViewFrames">
+		<label>Earth View Frames</label>
+		<description></description>
+	</element>			
+		<!-- ==================================================== -->
+	<element name="gmi:mie_dayModeScans">
+		<label>Day Mode Scans</label>
+		<description></description>
+	</element>				
+		<!-- ==================================================== -->
+	<element name="gmi:mie_reflectiveBandsWithBadData">
+		<label>Reflective Bands With Bad Data</label>
+		<description></description>
+	</element>
+		<!-- ==================================================== -->
+	<element name="gmi:mie_EmissiveBand">
+		<label>Emissive Band</label>
+		<description></description>
+	</element>
+		<!-- ==================================================== -->
+	<element name="gmi:mie_EmissiveLines">
+		<label>Emissive Lines</label>
+		<description></description>
+	</element>
+		<!-- ==================================================== -->
+	<element name="gmi:mie_EmissiveSamples">
+		<label>Emissive Samples</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:mie_EmissiveBandsWithBadData">
+		<label>Emissive Bands With Bad Data</label>
+		<description></description>
+	</element>		
+		<!-- ==================================================== -->
+	<element name="gmi:mie_environmentalConditions">
+		<label>Environmental Conditions</label>
+		<description></description>
+	</element>	
+		<!-- ==================================================== -->
+	<element name="gmi:MI_EnvironmentalRecord">
+		<label>Environmental Record</label>
+		<description></description>
+	</element>	
+		
+		<!-- ==================================================== -->
+	<element name="gmi:MIE_AcquisitionInformation">
+		<label>Acquisition Information description</label>
+		<description></description>
+	</element>		
+	
+	
+	
+							
+	<!-- ==================================================== -->
+	<element name="gco:Integer">
+		<label>Integer</label>
+		<description>Please input an Integer</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gco:Real">
+		<label>Real</label>
+		<description>Please input a Real</description>
+	</element>
+	<!-- ==================================================== -->
+
+	<element name="gco:Boolean">
+		<label>Yes / No</label>
+		<description>Please tick if the answer is yes</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gco:Decimal">
+		<label>Decimal</label>
+		<description>Please input decimal number</description>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmd:errorStatistic">
+		<label>Degree</label>
+		<description>This is the degree of conformity of the resource to the implementing
+			rules adopted under Article 7(1) of Directive 2007/2/EC or other
+			specification. The value domain of this metadata element is defined in Part
+			D.</description>
+		<helper>
+			<option> Not Evaluated </option>
+			<option> Not Conformant </option>
+			<option> Conformant </option>
+		</helper>
+	</element>
+	<!-- ==================================================== -->
+	<element name="gmd:DQ_QuantitiativeResult">
+		<label>Degree</label>
+		<description>Please choose one conformant degree</description>
+	</element>
+	<!-- ==================================================== -->
+
+
+</labels>

@@ -1,0 +1,77 @@
+<EURAC_GENERIC_P>
+		<ProcessorConfig>
+			<Pseudosatellite>Eurac</Pseudosatellite>
+		</ProcessorConfig>
+		<InspireMetaData>
+			<MetaMETADATA_LANGUAGE>eng</MetaMETADATA_LANGUAGE>
+			<MetaRESOURCE_TYPE>dataset</MetaRESOURCE_TYPE>
+			<MetaACQUISITION_STATION>EURAC Research - Bolzano/Renon</MetaACQUISITION_STATION>
+			<MetaMETADATA_RESPONSIBLE_ORGANIZATION>EURAC Research - Institute for Applied Remote Sensing</MetaMETADATA_RESPONSIBLE_ORGANIZATION>
+			<MetaMETADATA_RESPONSIBLE_EMAIL>support.rs@eurac.edu</MetaMETADATA_RESPONSIBLE_EMAIL>
+			<MetaMETADATA_RESPONSIBLE_ROLE>publisher</MetaMETADATA_RESPONSIBLE_ROLE>
+			<MetaRESPONSIBLE_ORGANIZATION_NAME>EURAC Research - Institute for Applied Remote Sensing</MetaRESPONSIBLE_ORGANIZATION_NAME>
+			<MetaRESPONSIBLE_EMAIL>support.rs@eurac.edu</MetaRESPONSIBLE_EMAIL>
+			<MetaRESPONSIBLE_URL>http://www.eurac.edu/en/research/institutes/remotesensing/default.html</MetaRESPONSIBLE_URL>
+			<MetaRESPONSIBLE_ROLE>pointOfContact</MetaRESPONSIBLE_ROLE>
+			<MetaKEYWORD>Environmental monitoring facilities</MetaKEYWORD>
+			<MetaTHESAURUS_DATE>2008-06-01</MetaTHESAURUS_DATE>
+			<MetaKEYWORD>LANDSAT</MetaKEYWORD>
+			<MetaLIMITATIONS_ON_PUBLIC_ACCESS>restricted to partnership entities</MetaLIMITATIONS_ON_PUBLIC_ACCESS>
+			<MetaCONDITIONS_APPLYING_TO_ACCESS_AND_USE>no limitation</MetaCONDITIONS_APPLYING_TO_ACCESS_AND_USE>
+			<MetaOTHER_CONDITIONS_TO_ACCESS_AND_USE>otherRestrictions</MetaOTHER_CONDITIONS_TO_ACCESS_AND_USE>
+			<MetaRESOURCE_LANGUAGE>eng</MetaRESOURCE_LANGUAGE>
+			<MetaCHARACTER_SET>utf8</MetaCHARACTER_SET>
+			<MetaTOPIC_CATEGORY>imageryBaseMapsEarthCover</MetaTOPIC_CATEGORY>
+			<MetaANCILLIARYDATA>0</MetaANCILLIARYDATA>
+			<MetaPIXELVALUE>Information about pixel value</MetaPIXELVALUE>
+			<MetaSPATIAL_RESOLUTION>30.0</MetaSPATIAL_RESOLUTION>
+			<MetaPRODUCT_FILETYPE>TAR GZ</MetaPRODUCT_FILETYPE>
+			<MetaCODESPACE>http://abz01dmi.eurac.edu/STORAGE</MetaCODESPACE>
+			<XSLT_SVN_REVISION>345</XSLT_SVN_REVISION>
+		</InspireMetaData>
+		<Processing>
+			<AOI name="LANDSAT" active="yes">
+				<Meta>
+					<MetaSampleEntry>"N/A"</MetaSampleEntry>
+				</Meta>
+				<Task name="createSymLinks" type="sh" active="yes" priority="NORM">
+					 <EMail>support.rs@eurac.edu</EMail>
+					 <NotifyEmail>false</NotifyEmail>
+			 		 <Command>perl</Command>
+					 <Parameter>/usr/local/bin/recursiveSymlinkSetup.pl</Parameter>
+					 <Parameter>$CWD</Parameter>
+					 <Parameter>/mnt/LANDSAT</Parameter>
+					 <Parameter>tar.gz</Parameter>
+				</Task>
+				<Task name="generateIntermediateMetadata" type="class" active="yes" priority="NORM">
+					<Command>class</Command>
+					<FileType>*.tar.gz</FileType>
+					<Parameter>edu.eurac.mdplugins.landsat.IntermediateMetadataGenerator</Parameter>
+					<Parameter>/raid0/opmdpsdist/STAMPS</Parameter>
+					<Parameter>/raid0/opmdpsdist/tmp</Parameter>
+					<Parameter>/raid0/opmdpsdist/IntermediateMetadataFormat</Parameter>
+					<Parameter>/raid0/opmdpsdist/Metadata</Parameter>
+				</Task>
+			</AOI>
+			<AOI name="IntermediateMetadataFormat" active="yes">
+				<Meta>
+					<MetaSensor>"N/A"</MetaSensor>
+				</Meta>
+				<Task name="generateGeoNetworkMeta" type="class" active="yes" priority="NORM">
+					<Command>class</Command>
+					<FileType>*meta.tar.md5</FileType>
+					<Parameter>edu.eurac.mdplugins.MetadataGenerator</Parameter>
+					<Parameter>/raid0/opmdpsdist/tmp</Parameter>
+					<Parameter>/Tasks/config/GeoNetwork_LANDSAT.xsl</Parameter>
+				</Task>
+				<Distribution type="sftp" active="yes" priority="NORM">
+						<consumer name="geonetworkuser" active="yes">
+							<ProductType>GNmeta*.xml</ProductType>
+							<DestinationPath>feederSatellite</DestinationPath>
+							<EMail>support.rs@eurac.edu</EMail>
+							<NotifyEmail>yes</NotifyEmail>
+						</consumer>
+				</Distribution>
+			</AOI>			
+		</Processing>
+</EURAC_GENERIC_P>
